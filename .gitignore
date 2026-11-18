@@ -1,0 +1,3 @@
+backups/
+*.dump
+.DS_Store
