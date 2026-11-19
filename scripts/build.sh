@@ -5,4 +5,5 @@ cd "$(dirname "$0")/.."
 DB="${PGDATABASE:-queryme_library}"
 psql -X -q -v ON_ERROR_STOP=1 -d postgres        -f sql/00_create_database.sql
 psql -X -q -v ON_ERROR_STOP=1 -d "$DB"           -f sql/01_schema.sql
+psql -X    -v ON_ERROR_STOP=1 -d "$DB"           -f sql/02_seed.sql
 
